@@ -30,7 +30,7 @@
 						<a href="dologin.jsp" class="btn btn-lg btn-n3c" style="margin-top: 30px; margin-bottom: 30px;">Click here to log in.</a>
 					</c:when>
 					<c:otherwise>
-    			${user_email} admin:${admin} public_health:${public_health}
+    			${user_email} admin:${admin} public_health:${public_health} peds_dashboard:${peds_dashboard}
     		</c:otherwise>
 				</c:choose>
 			</div>
