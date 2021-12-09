@@ -32,6 +32,7 @@
 	
 	<div class="container center-box shadow-border">
     	<h2 class="header-text"><img src="../images/n3c_logo.png" class="n3c_logo_header" alt="N3C Logo">N3C Admin</h2>
+		<h3 class="header-text">Public Health Dashboard Tab IFrame Definitions</h3>
     	
     	<form name="registration" method='POST' action='submitQuestion.jsp' autocomplete="off" >
   			<div class="form-group row">

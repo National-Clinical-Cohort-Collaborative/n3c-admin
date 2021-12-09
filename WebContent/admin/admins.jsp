@@ -28,6 +28,7 @@
 			<h2 class="header-text">
 				<img src="../images/n3c_logo.png" class="n3c_logo_header" alt="N3C Logo">N3C Admin
 			</h2>
+			<h3 class="header-text">Administrative Authorizations</h3>
 		</div>
 
 		<a href="addAdmin.jsp"><i class="fas fa-plus-circle fa-2x text-success"></i></a>

@@ -32,6 +32,7 @@
 	
 	<div class="container center-box shadow-border">
     	<h2 class="header-text"><img src="../images/n3c_logo.png" class="n3c_logo_header" alt="N3C Logo">N3C Admin</h2>
+		<h3 class="header-text">Pediatrics Dashboard Captions</h3>
     	
  		<sql:query var="caption" dataSource="jdbc/N3CLoginTagLib">
  	       select * from n3c_peds.caption where tag = ?

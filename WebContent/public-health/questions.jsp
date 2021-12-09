@@ -28,6 +28,7 @@
 			<h2 class="header-text">
 				<img src="../images/n3c_logo.png" class="n3c_logo_header" alt="N3C Logo">N3C Admin
 			</h2>
+			<h3 class="header-text">Public Health Dashboard Tab IFrame Definitions</h3>
 		</div>
 
 		<a href="addQuestion.jsp"><i class="fas fa-plus-circle fa-2x text-success"></i></a>
