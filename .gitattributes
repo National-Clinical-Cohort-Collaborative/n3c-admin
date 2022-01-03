@@ -23,6 +23,11 @@ WebContent/dologin.jsp -text
 WebContent/dologout.jsp -text
 WebContent/fake_admin.jsp -text
 WebContent/footer.jsp -text
+WebContent/foundry_feed/addFeed.jsp -text
+WebContent/foundry_feed/deleteFeed.jsp -text
+WebContent/foundry_feed/feeds.jsp -text
+WebContent/foundry_feed/submitFeed.jsp -text
+WebContent/foundry_feed/toggleActive.jsp -text
 WebContent/head.jsp -text
 WebContent/images/n3c_logo.png -text
 WebContent/index.jsp -text
@@ -88,6 +93,8 @@ WebContent/resources/DataTables/js/jquery.dataTables.min.js -text
 WebContent/resources/autocomplete.css -text
 WebContent/resources/autocomplete.js -text
 WebContent/resources/d3.v4.min.js -text
+WebContent/resources/images/logo.png -text
+WebContent/resources/main_style.css -text
 WebContent/resources/n3c_login_style.css -text
 WebContent/resources/tinymce/icons/default/icons.min.js -text
 WebContent/resources/tinymce/jquery.tinymce.min.js -text
@@ -165,4 +172,7 @@ WebContent/resources/tinymce/tinymce.d.ts -text
 WebContent/resources/tinymce/tinymce.min.js -text
 WebContent/session.jsp -text
 WebContent/sls.jsp -text
+WebContent/users/user_pending.jsp -text
+WebContent/users/user_roster.jsp -text
+WebContent/users/user_scan.jsp -text
 /pom.xml -text

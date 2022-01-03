@@ -17,6 +17,12 @@
 			<c:if test="${not empty peds_dashboard}">
 				<li class="nav-item"><a class="nav-link" href="<util:applicationRoot/>/peds_dashboard/captions.jsp">Peds Dashboard Captions</a></li>
 			</c:if>
+			<c:if test="${not empty users}">
+				<li class="nav-item"><a class="nav-link" href="<util:applicationRoot/>/users/user_scan.jsp">Users</a></li>
+			</c:if>
+			<c:if test="${not empty foundry_feed}">
+				<li class="nav-item"><a class="nav-link" href="<util:applicationRoot/>/foundry_feed/feeds.jsp">Foundry Feeds</a></li>
+			</c:if>
 			<li class="nav-item" style="flex-grow: 1; text-align: right;"><a class="nav-link" href="<util:applicationRoot/>/logout.jsp"><small>Logout</small></a></li>
 		</ul>
 	</div>
