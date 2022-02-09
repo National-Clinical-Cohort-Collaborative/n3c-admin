@@ -47,6 +47,12 @@ WebContent/public-health/questions.jsp -text
 WebContent/public-health/submitQuestion.jsp -text
 WebContent/public-health/toggleVisibility.jsp -text
 WebContent/public-health/updateQuestion.jsp -text
+WebContent/public_site/addBlock.jsp -text
+WebContent/public_site/blocks.jsp -text
+WebContent/public_site/deleteBlock.jsp -text
+WebContent/public_site/editBlock.jsp -text
+WebContent/public_site/submitBlock.jsp -text
+WebContent/public_site/updateBlock.jsp -text
 WebContent/resources/DataTables/css/dataTables.bootstrap.css -text
 WebContent/resources/DataTables/css/dataTables.bootstrap.min.css -text
 WebContent/resources/DataTables/css/dataTables.bootstrap4.css -text

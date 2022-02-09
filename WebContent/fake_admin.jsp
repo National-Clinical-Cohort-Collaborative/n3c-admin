@@ -5,7 +5,7 @@
 
 <c:set var="user_email" scope="session" value="david-eichmann@uiowa.edu" />
 <sql:query var="admins" dataSource="jdbc/N3CLoginTagLib">
-	select email, admin, public_health, peds_dashboard, users, foundry_feed from n3c_admin.admin where email = ?
+	select email, admin, public_health, peds_dashboard, users, foundry_feed, public_site from n3c_admin.admin where email = ?
 	<sql:param>${user_email}</sql:param>
 </sql:query>
 <c:forEach items="${admins.rows}" var="row" varStatus="rowCounter">
@@ -24,6 +24,9 @@
 	</c:if>
 	<c:if test="${row.foundry_feed == true}">
 		<c:set scope="session" var='foundry_feed' value='yes' />
+	</c:if>
+	<c:if test="${row.public_site == true}">
+		<c:set scope="session" var='public_site' value='yes' />
 	</c:if>
 </c:forEach>
 <c:redirect url="index.jsp" />
