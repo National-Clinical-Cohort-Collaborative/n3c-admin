@@ -44,6 +44,10 @@ WebContent/public-health/addQuestion.jsp -text
 WebContent/public-health/deleteQuestion.jsp -text
 WebContent/public-health/editQuestion.jsp -text
 WebContent/public-health/questions.jsp -text
+WebContent/public-health/resequenceBottom.jsp -text
+WebContent/public-health/resequenceDown.jsp -text
+WebContent/public-health/resequenceTop.jsp -text
+WebContent/public-health/resequenceUp.jsp -text
 WebContent/public-health/submitQuestion.jsp -text
 WebContent/public-health/toggleVisibility.jsp -text
 WebContent/public-health/updateQuestion.jsp -text

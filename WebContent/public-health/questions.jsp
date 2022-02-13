@@ -2,6 +2,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql"%>
 <%@ taglib prefix="util" uri="http://icts.uiowa.edu/tagUtil"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <!DOCTYPE html>
 <html>
 <jsp:include page="../head.jsp" flush="true" />
@@ -33,7 +34,7 @@
 
 		<a href="addQuestion.jsp"><i class="fas fa-plus-circle fa-2x text-success"></i></a>
 		<sql:query var="admins" dataSource="jdbc/N3CLoginTagLib">
- 	       select * from n3c_questions.roster order by asked desc
+ 	       select * from n3c_questions.roster order by seqnum
  	   </sql:query>
 		<table border=1>
 			<thead>
@@ -43,6 +44,7 @@
 					<th>Asked</th>
 					<th>IFrame info</th>
 					<th>Visible in Production</th>
+					<th>Resequence</th>
 					<th>IFrame Content</th>
 					<th>IFrame Style</th>
 					<th></th>
@@ -66,6 +68,28 @@
 								</c:otherwise>
 							</c:choose>
 							</a>
+						</td>
+						<td>
+							<c:choose>
+								<c:when test="${rowCounter.first}">
+									<i class="fas fa-angle-double-up fa-lg"></i>
+									<i class="fas fa-arrow-up fa-lg"></i>
+									<a href="resequenceDown.jsp?iframe=${row.iframe_info}&current=${rowCounter.count}"><i class="fas fa-arrow-down fa-lg text-success"></i></a>
+									<a href="resequenceBottom.jsp?iframe=${row.iframe_info}&current=${rowCounter.count}"><i class="fas fa-angle-double-down fa-lg text-success"></i></a>
+								</c:when>
+								<c:when test="${rowCounter.last}">
+									<a href="resequenceTop.jsp?iframe=${row.iframe_info}&current=${rowCounter.count}"><i class="fas fa-angle-double-up fa-lg text-success"></i></a>
+									<a href="resequenceUp.jsp?iframe=${row.iframe_info}&current=${rowCounter.count}"><i class="fas fa-arrow-up fa-lg text-success"></i></a>
+									<i class="fas fa-arrow-down fa-lg"></i>
+									<i class="fas fa-angle-double-down fa-lg"></i>
+								</c:when>
+								<c:otherwise>
+									<a href="resequenceTop.jsp?iframe=${row.iframe_info}&current=${rowCounter.count}"><i class="fas fa-angle-double-up fa-lg text-success"></i></a>
+									<a href="resequenceUp.jsp?iframe=${row.iframe_info}&current=${rowCounter.count}"><i class="fas fa-arrow-up fa-lg text-success"></i></a>
+									<a href="resequenceDown.jsp?iframe=${row.iframe_info}&current=${rowCounter.count}"><i class="fas fa-arrow-down fa-lg text-success"></i></a>
+									<a href="resequenceBottom.jsp?iframe=${row.iframe_info}&current=${rowCounter.count}"><i class="fas fa-angle-double-down fa-lg text-success"></i></a>
+								</c:otherwise>
+							</c:choose>
 						</td>
 						<td>${row.iframe_content}</td>
 						<td>${row.iframe_style}</td>
