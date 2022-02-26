@@ -33,7 +33,7 @@
 
 		<a href="addFeed.jsp"><i class="fas fa-plus-circle fa-2x text-success"></i></a>
 		<sql:query var="admins" dataSource="jdbc/N3CLoginTagLib">
- 	       select rid, active, to_char(created, 'YYYY-MM-DD HH:MI') as created from palantir.tiger_team order by 3,1
+ 	       select rid, active, to_char(created, 'YYYY-MM-DD HH:MI') as created from palantir.tiger_team order by 3 desc,1
  	   </sql:query>
 		<table border=1>
 			<thead>
