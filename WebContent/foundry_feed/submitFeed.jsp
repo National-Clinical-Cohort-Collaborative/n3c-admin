@@ -3,7 +3,7 @@
 <%@ taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql"%>
 
 <sql:update var="admins" dataSource="jdbc/N3CLoginTagLib">
-	insert into palantir.tiger_team values(?, false)
+	insert into palantir.tiger_team values(?, false, now())
 	<sql:param>${param.rid}</sql:param>
 </sql:update>
 <c:redirect url="feeds.jsp" />

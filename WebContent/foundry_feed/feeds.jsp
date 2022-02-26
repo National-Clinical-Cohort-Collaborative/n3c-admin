@@ -33,13 +33,15 @@
 
 		<a href="addFeed.jsp"><i class="fas fa-plus-circle fa-2x text-success"></i></a>
 		<sql:query var="admins" dataSource="jdbc/N3CLoginTagLib">
- 	       select rid, active from palantir.tiger_team order by 1,2
+ 	       select rid, active, to_char(created, 'YYYY-MM-DD HH:MI') as created from palantir.tiger_team order by 3,1
  	   </sql:query>
 		<table border=1>
 			<thead>
 				<tr>
 					<th>RID</th>
 					<th>Active</th>
+					<th>Created</th>
+					<th>Files</th>
 					<th></th>
 				</tr>
 			</thead>
@@ -58,6 +60,20 @@
 								</c:otherwise>
 							</c:choose>
 							</a>
+						</td>
+						<td>
+							${row.created}
+						</td>
+						<td>
+							<sql:query var="files" dataSource="jdbc/N3CLoginTagLib">
+								select file, to_char(updated, 'YYYY-MM-DD HH:MI') as updated from palantir.tiger_team_file where rid = ? order by 1
+								<sql:param>${row.rid}</sql:param>
+							</sql:query>
+							<ul>
+							<c:forEach items="${files.rows}" var="fileVar" varStatus="fileCounter">
+								<li>${fileVar.file} (${fileVar.updated})
+							</c:forEach>
+							</ul>
 						</td>
 						<td>
 							<a href="deleteFeed.jsp?rid=${row.rid}"><i class="fas fa-times-circle fa-lg text-danger"></i></a>
