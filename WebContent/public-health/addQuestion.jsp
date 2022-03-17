@@ -41,7 +41,7 @@
     			<input name="question" type="text" class="form-control" id="question" value="">
    			</div>
   			<div class="form-group row">
-    			<label for="iframe_info" class="required col-sm-2 col-form-label">IFrame Info</label>
+    			<label for="iframe_info" class="required col-sm-2 col-form-label">IFrame Info ([a-z],-)</label>
                 <style>.required:after { content:" *"; color: red; } </style>
     			<div class="col-sm-6">
       				<input name="iframe_info" type="text" class="form-control" id="iframe_info" value="">

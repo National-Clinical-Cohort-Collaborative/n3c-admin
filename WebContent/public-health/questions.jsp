@@ -94,7 +94,7 @@
 						<td>${row.iframe_content}</td>
 						<td>${row.iframe_style}</td>
 						<td>
-							<c:if test="${not row.visible}"><a href="deleteQuestion.jsp?iframe=${row.iframe_info}"><i class="fas fa-times-circle fa-lg text-danger"></i></a></c:if>
+							<c:if test="${not row.visible}"><a href="deleteQuestion.jsp?current=${rowCounter.count}"><i class="fas fa-times-circle fa-lg text-danger"></i></a></c:if>
 						</td>
 					</tr>
 				</c:forEach>
