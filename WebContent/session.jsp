@@ -6,7 +6,7 @@
 <c:set var="user_email" scope="session">${attributes.get("email")[0]}</c:set>
 
 <sql:query var="admins" dataSource="jdbc/N3CLoginTagLib">
-	select email, admin, public_health, peds_dashboard, users, foundry_feed, public_site from n3c_admin.admin where email = lower(?)
+	select email, admin, public_health, peds_dashboard, users, foundry_feed, public_site, recover from n3c_admin.admin where email = lower(?)
 	<sql:param>${user_email}</sql:param>
 </sql:query>
 <c:forEach items="${admins.rows}" var="row" varStatus="rowCounter">
@@ -28,6 +28,9 @@
 	</c:if>
 	<c:if test="${row.public_site == true}">
 		<c:set scope="session" var='public_site' value='yes' />
+	</c:if>
+	<c:if test="${row.recover == true}">
+		<c:set scope="session" var='recover' value='yes' />
 	</c:if>
 </c:forEach>
 

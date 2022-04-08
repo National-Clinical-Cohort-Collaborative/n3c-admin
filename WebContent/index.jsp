@@ -35,6 +35,7 @@
     			<br>public_health:${public_health}
     			<br>public_site:${public_site}
     			<br>peds_dashboard:${peds_dashboard}
+    			<br>RECOVER dashboard:${recover}
     			<br>users:${users}
     			<br>foundry_feed:${foundry_feed}
     		</c:otherwise>

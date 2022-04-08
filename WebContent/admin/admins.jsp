@@ -33,7 +33,10 @@
 
 		<a href="addAdmin.jsp"><i class="fas fa-plus-circle fa-2x text-success"></i></a>
 		<sql:query var="admins" dataSource="jdbc/N3CLoginTagLib">
- 	       select last_name,first_name,admin.email,admin,public_health,peds_dashboard,users,foundry_feed from n3c_admin.admin natural join n3c_admin.registration order by 1,2
+ 	       select last_name,first_name,admin.email,admin,public_health,peds_dashboard,users,foundry_feed,recover
+ 	       from n3c_admin.admin,n3c_admin.registration
+ 	       where lower(admin.email) = lower(registration.email)
+ 	       order by 1,2
  	   </sql:query>
 		<table border=1>
 			<thead>
@@ -43,6 +46,7 @@
 					<th>Admin</th>
 					<th>Public Health</th>
 					<th>Pediatrics Dashboard</th>
+					<th>RECOVER Dashboard</th>
 					<th>Users</th>
 					<th>Foundry Feed</th>
 					<th></th>
@@ -105,6 +109,18 @@
 							<a href="toggleAuthorization.jsp?auth=foundry_feed&email=${row.email}">
 							<c:choose>
 								<c:when test="${row.foundry_feed}">
+									<i class="fas fa-toggle-on fa-lg text-success"></i>
+								</c:when>
+								<c:otherwise>
+									<i class="fas fa-toggle-off fa-lg"></i>
+								</c:otherwise>
+							</c:choose>
+							</a>
+						</td>
+						<td style="text-align:center">
+							<a href="toggleAuthorization.jsp?auth=recover&email=${row.email}">
+							<c:choose>
+								<c:when test="${row.recover}">
 									<i class="fas fa-toggle-on fa-lg text-success"></i>
 								</c:when>
 								<c:otherwise>

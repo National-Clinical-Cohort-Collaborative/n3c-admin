@@ -57,6 +57,12 @@ WebContent/public_site/deleteBlock.jsp -text
 WebContent/public_site/editBlock.jsp -text
 WebContent/public_site/submitBlock.jsp -text
 WebContent/public_site/updateBlock.jsp -text
+WebContent/recover/addCaption.jsp -text
+WebContent/recover/captions.jsp -text
+WebContent/recover/deleteCaption.jsp -text
+WebContent/recover/editCaption.jsp -text
+WebContent/recover/submitCaption.jsp -text
+WebContent/recover/updateCaption.jsp -text
 WebContent/resources/DataTables/css/dataTables.bootstrap.css -text
 WebContent/resources/DataTables/css/dataTables.bootstrap.min.css -text
 WebContent/resources/DataTables/css/dataTables.bootstrap4.css -text

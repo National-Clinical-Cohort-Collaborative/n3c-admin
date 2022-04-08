@@ -20,6 +20,9 @@
 			<c:if test="${not empty peds_dashboard}">
 				<li class="nav-item"><a class="nav-link" href="<util:applicationRoot/>/peds_dashboard/captions.jsp">Peds Dashboard Captions</a></li>
 			</c:if>
+			<c:if test="${not empty recover}">
+				<li class="nav-item"><a class="nav-link" href="<util:applicationRoot/>/recover/captions.jsp">RECOVER Dashboard Captions</a></li>
+			</c:if>
 			<c:if test="${not empty users}">
 				<li class="nav-item"><a class="nav-link" href="<util:applicationRoot/>/users/user_scan.jsp">Users</a></li>
 			</c:if>

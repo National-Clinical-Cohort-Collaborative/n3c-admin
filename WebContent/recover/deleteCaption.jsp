@@ -3,7 +3,7 @@
 <%@ taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql"%>
 
 <sql:update var="admins" dataSource="jdbc/N3CLoginTagLib">
-	insert into n3c_admin.admin values(lower(?), false, false, false, false, false, false, false)
-	<sql:param>${param.email}</sql:param>
+	delete from n3c_recover.caption where tag = ?
+	<sql:param>${param.tag}</sql:param>
 </sql:update>
-<c:redirect url="admins.jsp" />
+<c:redirect url="captions.jsp" />
