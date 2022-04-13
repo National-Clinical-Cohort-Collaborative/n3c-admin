@@ -94,6 +94,18 @@
 							</a>
 						</td>
 						<td style="text-align:center">
+							<a href="toggleAuthorization.jsp?auth=recover&email=${row.email}">
+							<c:choose>
+								<c:when test="${row.recover}">
+									<i class="fas fa-toggle-on fa-lg text-success"></i>
+								</c:when>
+								<c:otherwise>
+									<i class="fas fa-toggle-off fa-lg"></i>
+								</c:otherwise>
+							</c:choose>
+							</a>
+						</td>
+						<td style="text-align:center">
 							<a href="toggleAuthorization.jsp?auth=users&email=${row.email}">
 							<c:choose>
 								<c:when test="${row.users}">
@@ -109,18 +121,6 @@
 							<a href="toggleAuthorization.jsp?auth=foundry_feed&email=${row.email}">
 							<c:choose>
 								<c:when test="${row.foundry_feed}">
-									<i class="fas fa-toggle-on fa-lg text-success"></i>
-								</c:when>
-								<c:otherwise>
-									<i class="fas fa-toggle-off fa-lg"></i>
-								</c:otherwise>
-							</c:choose>
-							</a>
-						</td>
-						<td style="text-align:center">
-							<a href="toggleAuthorization.jsp?auth=recover&email=${row.email}">
-							<c:choose>
-								<c:when test="${row.recover}">
 									<i class="fas fa-toggle-on fa-lg text-success"></i>
 								</c:when>
 								<c:otherwise>
