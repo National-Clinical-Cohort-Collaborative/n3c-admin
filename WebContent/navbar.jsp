@@ -11,7 +11,7 @@
 			<c:if test="${not empty admin}">
 				<li class="nav-item"><a class="nav-link" href="<util:applicationRoot/>/admin/admins.jsp">Admins</a></li>
 			</c:if>
-			<c:if test="${not empty public_site}">
+			<c:if test="${not empty public_health}">
 				<li class="nav-item"><a class="nav-link" href="<util:applicationRoot/>/public-health/questions.jsp">Public Health Questions</a></li>
 			</c:if>
 			<c:if test="${not empty public_site}">
