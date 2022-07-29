@@ -19,9 +19,9 @@
 <script type="text/javascript" src="../resources/tinymce/tinymce.min.js"></script>
 <script type="text/javascript">
 	tinyMCE.init({
-		plugins: "hr image link lists table",
+		plugins: "hr image link lists table code",
 		table_default_styles: {},
-		toolbar: 'undo redo | styleselect | bold italic | link | outdent indent | numlist bullist | image | hr',
+		toolbar: 'undo redo | styleselect | bold italic | link | outdent indent | numlist bullist | image | hr | code',
 		mode : "textareas"
 	});
 </script>
