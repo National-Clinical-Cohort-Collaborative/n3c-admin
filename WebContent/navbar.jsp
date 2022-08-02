@@ -14,6 +14,9 @@
 			<c:if test="${not empty public_health}">
 				<li class="nav-item"><a class="nav-link" href="<util:applicationRoot/>/public-health/questions.jsp">Public Health Questions</a></li>
 			</c:if>
+			<c:if test="${not empty public_health_mode}">
+				<li class="nav-item"><a class="nav-link" href="<util:applicationRoot/>/public-health/modes.jsp">Public Health Modes</a></li>
+			</c:if>
 			<c:if test="${not empty public_site}">
 				<li class="nav-item"><a class="nav-link" href="<util:applicationRoot/>/public_site/blocks.jsp">Public Site Content</a></li>
 			</c:if>

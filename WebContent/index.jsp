@@ -33,6 +33,7 @@
     			Authorizations for ${user_email}: <br>
     			<br>admin:${admin}
     			<br>public_health:${public_health}
+    			<br>public_health_mode:${public_health_mode}
     			<br>public_site:${public_site}
     			<br>peds_dashboard:${peds_dashboard}
     			<br>RECOVER dashboard:${recover}
