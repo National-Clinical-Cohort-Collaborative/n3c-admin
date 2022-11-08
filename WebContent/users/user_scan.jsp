@@ -14,7 +14,7 @@
 
 	<jsp:include page="../navbar.jsp" flush="true" />
 
-	<div class="container center-box shadow-border">
+	<div class=" center-box shadow-border">
 		<h2 class="header-text">
 			<img src="../images/n3c_logo.png" class="n3c_logo_header" alt="N3C Logo">N3C User Scan
 		</h2>
@@ -38,32 +38,32 @@
         <c:if test="${not empty param.pattern }">
 	 		<h3>palantir.n3c_user</h3>
 		    <sql:query var="categories" dataSource="jdbc/N3CLoginTagLib">
-		        select email,first_name,last_name,ror_id,ror_name,una_path,created
-		        from palantir.n3c_user
+		        select email,first_name,last_name,ror_id,ror_name,una_path,created,unite_user_id
+		        from palantir.n3c_user natural left outer join n3c_admin.user_binding
 		        where ${param.column} ~ ? order by created desc;
 		        <sql:param>${param.pattern}</sql:param>
 		    </sql:query>
 		    <table class="table table-hover">
-		    <thead><tr><th>Email</th><th>First Name</th><th>Last Name</th><th>ROR ID</th><th>ROR Name</th><th>UNA Path</th><th>Created</th></tr></thead>
+		    <thead><tr><th>Email</th><th>First Name</th><th>Last Name</th><th>ROR ID</th><th>ROR Name</th><th>UNA Path</th><th>Created</th><th>User ID</th></tr></thead>
 		    <tbody>
 		    <c:forEach items="${categories.rows}" var="row" varStatus="rowCounter">
-		        <tr><td>${row.email}</td><td>${row.first_name}</td><td>${row.last_name}</td><td>${row.ror_id}</td><td>${row.ror_name}</td><td>${row.una_path}</td><td>${row.created}</td></tr>
+		        <tr><td>${row.email}</td><td>${row.first_name}</td><td>${row.last_name}</td><td>${row.ror_id}</td><td>${row.ror_name}</td><td>${row.una_path}</td><td>${row.created}</td><td>${row.unite_user_id}</td></tr>
 		    </c:forEach>
 		    </tbody>
 		    </table>
 
 	 		<h3>n3c_admin.registration</h3>
 		    <sql:query var="registration" dataSource="jdbc/N3CLoginTagLib">
-		        select email,first_name,last_name,institution,official_full_name,official_institution,created,enclave
+		        select email,first_name,last_name,institution,official_full_name,official_institution,created,updated,enclave
 		        from n3c_admin.registration
 		        where ${param.column} ~ ? order by created desc;
 		        <sql:param>${param.pattern}</sql:param>
 		    </sql:query>
 		    <table class="table table-hover">
-		    <thead><tr><th>Email</th><th>First Name</th><th>Last Name</th><th>Institution</th><th>Official Full Name</th><th>Official Institution</th><th>Created</th><th>Enclave</th></tr></thead>
+		    <thead><tr><th>Email</th><th>First Name</th><th>Last Name</th><th>Institution</th><th>Official Full Name</th><th>Official Institution</th><th>Created</th><th>Updated</th><th>Enclave</th></tr></thead>
 		    <tbody>
 		    <c:forEach items="${registration.rows}" var="row" varStatus="rowCounter">
-		        <tr><td>${row.email}</td><td>${row.first_name}</td><td>${row.last_name}</td><td>${row.institution}</td><td>${row.official_full_name}</td><td>${row.official_institution}</td><td>${row.created}</td><td>${row.enclave}</td></tr>
+		        <tr><td>${row.email}</td><td>${row.first_name}</td><td>${row.last_name}</td><td>${row.institution}</td><td>${row.official_full_name}</td><td>${row.official_institution}</td><td>${row.created}</td><td>${row.updated}</td><td>${row.enclave}</td></tr>
 		    </c:forEach>
 		    </tbody>
 		    </table>
