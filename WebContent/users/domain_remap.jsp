@@ -27,16 +27,16 @@
 		</h2>
 
 		<sql:query var="categories" dataSource="jdbc/N3CLoginTagLib">
-	        select substring(email from '.*@(.*)') as email, official_institution, count(*), institutionid, institutionname
-	        from n3c_admin.dua_master, n3c_admin.registration as foo
-	        where enclave
-	          and not exists (select orcid_id from palantir.n3c_user as bar where foo.orcid_id = bar.orcid_id)
-	          and official_institution not in ('NIH','login.gov')
-	          and (substring(email from '.*@(.*)') = substring(duacontactemail from '.*@(.*)')
-	          		or
-	          		substring(email from '.*@(.*)') = substring(signatoryemail from '.*@(.*)'))
-	          and substring(email from '.*@(.*)') not in ('gmail.com','yahoo.com')
-	        group by 1,2,4,5 order by 3 desc;
+			select substring(email from '.*@(.*)') as email, official_institution, count(*), institutionid, institutionname, duacontactemail, signatoryemail
+			from n3c_admin.dua_master, n3c_admin.registration as foo
+			where enclave
+			  and official_institution not in ('NIH')
+			  and (substring(email from '.*@(.*)') = substring(duacontactemail from '.*@(.*)')
+			   or  substring(email from '.*@(.*)') = substring(signatoryemail from '.*@(.*)'))
+			  and substring(email from '.*@(.*)') not in ('gmail.com','yahoo.com')
+			  and not exists (select ror_id from palantir.n3c_user where ror_id =institutionid)
+			  and institutionid not in (select ror from n3c_admin.registration_domain_remap)
+			group by 1,2,4,5,6,7 order by 1;
 	    </sql:query>
 		<table>
 			<tr>
@@ -45,6 +45,8 @@
 				<th>Count</th>
 				<th>DUA ROR</th>
 				<th>DUA Institution</th>
+				<th>DUA Contact</th>
+				<th>DUA Signatory</th>
 			</tr>
 			<c:forEach items="${categories.rows}" var="row"
 				varStatus="rowCounter">
@@ -54,6 +56,8 @@
 					<td>${row.count}</td>
 					<td>${row.institutionid}</td>
 					<td>${row.institutionname}</td>
+					<td>${row.duacontactemail}</td>
+					<td>${row.signatoryemail}</td>
 				</tr>
 			</c:forEach>
 		</table>
