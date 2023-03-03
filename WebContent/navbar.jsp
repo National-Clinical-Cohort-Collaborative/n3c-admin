@@ -27,7 +27,19 @@
 				<li class="nav-item"><a class="nav-link" href="<util:applicationRoot/>/recover/captions.jsp">RECOVER Dashboard Captions</a></li>
 			</c:if>
 			<c:if test="${not empty users}">
-				<li class="nav-item"><a class="nav-link" href="<util:applicationRoot/>/users/user_scan.jsp">Users</a></li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"	aria-haspopup="true" aria-expanded="false">Users</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+						<a class="dropdown-item" href="<util:applicationRoot/>/users/admin.jsp">Overall Status</a>
+						<a class="dropdown-item" href="<util:applicationRoot/>/users/enclave_status.jsp">User Enclave Status</a>
+						<a class="dropdown-item" href="<util:applicationRoot/>/users/user_roster.jsp">User Roster</a>
+						<a class="dropdown-item" href="<util:applicationRoot/>/users/user_pending.jsp">Users Pending</a>
+						<a class="dropdown-item" href="<util:applicationRoot/>/users/user_scan.jsp">User Scan</a>
+						<a class="dropdown-item" href="<util:applicationRoot/>/users/domain_remap.jsp">Domain Remap</a>
+						<a class="dropdown-item" href="<util:applicationRoot/>/users/admin_map_email.jsp">Account Mapping</a>
+						<a class="dropdown-item" href="<util:applicationRoot/>/users/admin_delete.jsp">User Deletion</a>
+					</div>
+				</li>
 			</c:if>
 			<c:if test="${not empty foundry_feed}">
 				<li class="nav-item"><a class="nav-link" href="<util:applicationRoot/>/foundry_feed/feeds.jsp">Foundry Feeds</a></li>
@@ -37,6 +49,9 @@
 	</div>
 </nav>
 
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <script>
 $(document).on('click', '.dropdown-menu .nav-card', function (e) {
 	  e.stopPropagation();

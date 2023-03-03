@@ -3,6 +3,12 @@
 <%@ taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql"%>
 <%@ taglib prefix="util" uri="http://icts.uiowa.edu/tagUtil"%>
 <!DOCTYPE html>
+
+<c:if test="${empty valid}">
+	<c:set scope="session" var="not_logged_in" value="t" />
+	<c:redirect url="../index.jsp" />
+</c:if>
+
 <html>
 <jsp:include page="../head.jsp" flush="true" />
 

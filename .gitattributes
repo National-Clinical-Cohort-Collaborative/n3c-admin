@@ -194,7 +194,15 @@ WebContent/resources/tinymce/tinymce.d.ts -text
 WebContent/resources/tinymce/tinymce.min.js -text
 WebContent/session.jsp -text
 WebContent/sls.jsp -text
+WebContent/users/admin.jsp -text
+WebContent/users/admin_delete.jsp -text
+WebContent/users/admin_map_email.jsp -text
+WebContent/users/domain_remap.jsp -text
+WebContent/users/enclave_status.jsp -text
+WebContent/users/enclave_status_feed.jsp -text
 WebContent/users/user_pending.jsp -text
+WebContent/users/user_pending_feed.jsp -text
 WebContent/users/user_roster.jsp -text
+WebContent/users/user_roster_feed.jsp -text
 WebContent/users/user_scan.jsp -text
 /pom.xml -text

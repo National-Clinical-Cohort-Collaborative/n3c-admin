@@ -21,7 +21,7 @@
 	<jsp:include page="../navbar.jsp" flush="true" />
 
 	<div class=" center-box shadow-border">
-    	<h2 class="header-text"><img src="../images/n3c_logo.png" class="n3c_logo_header" alt="N3C Logo">N3c Enclave Users</h2>
+    	<h2 class="header-text"><img src="../images/n3c_logo.png" class="n3c_logo_header" alt="N3C Logo">User Enclave Status</h2>
     	<div style="text-align:center;">
  			
 <p>&nbsp;</p>
@@ -33,7 +33,7 @@
 <link href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.js"></script>
 <script>
-$.getJSON("user_roster_feed.jsp", function(data){
+$.getJSON("enclave_status_feed.jsp", function(data){
 		
 	var json = $.parseJSON(JSON.stringify(data));
 
@@ -68,25 +68,14 @@ $.getJSON("user_roster_feed.jsp", function(data){
 	$('#table1').DataTable( {
     	data: data,
        	paging: true,
-    	pageLength: 5,
+    	pageLength: 10,
     	lengthMenu: [ 5, 10, 25, 50, 75, 100 ],
-    	order: [[0, 'asc']],
+    	order: [[2, 'desc'], [0, 'asc']],
      	columns: [
 	       	{ data: 'email', visible: true, orderable: true},
-	       	{ data: 'official_first_name', visible: true, orderable: true},
-	       	{ data: 'official_last_name', visible: true, orderable: true},
-	       	{ data: 'first_name', visible: true, orderable: true},
-	       	{ data: 'last_name', visible: true, orderable: true},
-	       	{ data: 'ror_id', visible: true, orderable: true},
-	       	{ data: 'ror_name', visible: true, orderable: true},
 	       	{ data: 'orcid_id', visible: true, orderable: true},
-	       	{ data: 'expertise', visible: true, orderable: true},
-	       	{ data: 'therapeutic_area', visible: true, orderable: true},
-	       	{ data: 'citizen_scientist', visible: true, orderable: true},
-	       	{ data: 'international', visible: true, orderable: true},
 	       	{ data: 'created', visible: true, orderable: true},
-	       	{ data: 'updated', visible: true, orderable: true},
-	       	{ data: 'una_path', visible: true, orderable: true}
+	       	{ data: 'unite_user_id', visible: true, orderable: true}
     	]
 	} );
 
