@@ -16,8 +16,6 @@
 @import "<util:applicationRoot/>/resources/autocomplete.css";
 </style>
 <body>
-
-
 	<jsp:include page="../navbar.jsp" flush="true" />
 	
 	<div class="container center-box shadow-border">
