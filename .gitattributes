@@ -69,6 +69,9 @@ WebContent/recover/deleteCaption.jsp -text
 WebContent/recover/editCaption.jsp -text
 WebContent/recover/submitCaption.jsp -text
 WebContent/recover/updateCaption.jsp -text
+WebContent/reporter/candidates.jsp -text
+WebContent/reporter/scan.jsp -text
+WebContent/reporter/submit_link.jsp -text
 WebContent/resources/DataTables/css/dataTables.bootstrap.css -text
 WebContent/resources/DataTables/css/dataTables.bootstrap.min.css -text
 WebContent/resources/DataTables/css/dataTables.bootstrap4.css -text
@@ -192,6 +195,12 @@ WebContent/resources/tinymce/themes/mobile/theme.min.js -text
 WebContent/resources/tinymce/themes/silver/theme.min.js -text
 WebContent/resources/tinymce/tinymce.d.ts -text
 WebContent/resources/tinymce/tinymce.min.js -text
+WebContent/scorecard/addCaption.jsp -text
+WebContent/scorecard/captions.jsp -text
+WebContent/scorecard/deleteCaption.jsp -text
+WebContent/scorecard/editCaption.jsp -text
+WebContent/scorecard/submitCaption.jsp -text
+WebContent/scorecard/updateCaption.jsp -text
 WebContent/session.jsp -text
 WebContent/sls.jsp -text
 WebContent/users/admin.jsp -text
