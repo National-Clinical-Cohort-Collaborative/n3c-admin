@@ -21,6 +21,8 @@ WebContent/admin/user_feed.jsp -text
 WebContent/attrs.jsp -text
 WebContent/dologin.jsp -text
 WebContent/dologout.jsp -text
+WebContent/duas/index.jsp -text
+WebContent/duas/submit.jsp -text
 WebContent/fake_admin.jsp -text
 WebContent/footer.jsp -text
 WebContent/foundry_feed/addFeed.jsp -text
@@ -203,6 +205,8 @@ WebContent/scorecard/submitCaption.jsp -text
 WebContent/scorecard/updateCaption.jsp -text
 WebContent/session.jsp -text
 WebContent/sls.jsp -text
+WebContent/tenant_duas/index.jsp -text
+WebContent/tenant_duas/submit.jsp -text
 WebContent/users/admin.jsp -text
 WebContent/users/admin_delete.jsp -text
 WebContent/users/admin_map_email.jsp -text

@@ -40,6 +40,13 @@
 						<a class="dropdown-item" href="<util:applicationRoot/>/users/admin_delete.jsp">User Deletion</a>
 					</div>
 				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"	aria-haspopup="true" aria-expanded="false">Organizations</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+						<a class="dropdown-item" href="<util:applicationRoot/>/duas">N3C</a>
+						<a class="dropdown-item" href="<util:applicationRoot/>/tenant_duas">Tenant</a>
+					</div>
+				</li>
 			</c:if>
 			<c:if test="${not empty foundry_feed}">
 				<li class="nav-item"><a class="nav-link" href="<util:applicationRoot/>/foundry_feed/feeds.jsp">Foundry Feeds</a></li>
